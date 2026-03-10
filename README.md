@@ -111,6 +111,6 @@ Os testes automatizados são executados automaticamente via GitHub Actions a cad
 
 ## Documentação Completa
 
-A documentação detalhada dos testes, execução e evidências pode ser consultada no Notion.
+A documentação detalhada dos testes, execução e evidências pode ser consultada no Notion. https://www.notion.so/Desafio-QA-Lacrei-Sa-de-31f4532bc67e80a1bbe8f414c2535f8d?source=copy_link
 
 Link da documentação: (inserir link)
