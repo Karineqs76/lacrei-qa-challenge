@@ -81,3 +81,34 @@ Foram identificadas quebras de layout nas telas de perfil de profissional e perf
 
 Severidade  
 Média
+
+---
+
+### 9. Texto "string" exibido na localização do profissional
+
+Descrição  
+Na tela de visualização do perfil de profissional, o campo de localização apresenta o texto "string" antes da cidade e estado, exibindo "string, São Paulo, SP".
+
+Severidade  
+Baixa
+
+---
+
+### 10. Ação "Reenviar código de segurança" não apresenta confirmação visual
+
+Descrição  
+Na tela de confirmação de código SMS durante o fluxo de agendamento de consulta, ao clicar em "Reenviar código de segurança" o sistema envia corretamente um novo código por SMS, porém não apresenta nenhuma confirmação visual na interface.
+
+Severidade  
+Média
+
+
+
+
+
+
+
+
+
+
+
