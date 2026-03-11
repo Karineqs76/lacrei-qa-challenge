@@ -19,15 +19,15 @@ Os seguintes fluxos da aplicação foram analisados:
 
 # Ambiente de Testes
 
-**Ambiente utilizado:** Staging  
+Ambiente utilizado: Staging
 
-**URL da aplicação**  
+URL da aplicação  
 https://paciente-staging.lacreisaude.com.br
 
-**Navegador utilizado**  
+Navegador utilizado  
 Google Chrome
 
-**Ferramentas utilizadas**
+Ferramentas utilizadas
 
 - GitHub  
 - Notion  
@@ -40,22 +40,21 @@ Google Chrome
 
 # Como configurar o ambiente de testes
 
-
-1. Clonar o repositório
+Clonar o repositório
 
 ```bash
 git clone https://github.com/Karineqs76/lacrei-qa-challenge.git
 ```
 
-2. Abrir o projeto em um editor de código (ex: VS Code)
+Abrir o projeto em um editor de código (ex: VS Code)
 
-3. Instalar as dependências do projeto
+Instalar as dependências do projeto
 
 ```bash
 npm install
 ```
 
-4. Garantir que o **Node.js esteja instalado na máquina**.
+Garantir que o Node.js esteja instalado na máquina.
 
 ---
 
@@ -71,7 +70,7 @@ testes-funcionais
 
 Cada cenário foi validado diretamente na plataforma utilizando o ambiente de staging.
 
-Os resultados da execução e evidências foram documentados na plataforma **Notion**.
+Os resultados da execução e evidências foram documentados na plataforma Notion.
 
 ---
 
@@ -122,7 +121,7 @@ Checklist e relatório de acessibilidade utilizando Lighthouse e validações ma
 ```
 testes-performance
 ```
-Resultados da análise de desempenho utilizando Lighthouse.
+Resultados da análise de desempenho utilizando Lighthouse e simulação de carga.
 
 ```
 testes-responsividade
@@ -134,10 +133,12 @@ bugs
 ```
 Registro estruturado dos bugs identificados durante os testes.
 
+Os bugs também foram registrados como **Issues no GitHub**, simulando o fluxo de gestão de defeitos utilizado em ambientes reais de desenvolvimento.
+
 ```
 automacao
 ```
-Implementação dos testes automatizados utilizando Cypress e Cucumber.
+Testes automatizados implementados utilizando Cypress com Cucumber para validação do fluxo de cadastro de usuário.
 
 ---
 
@@ -158,12 +159,12 @@ Durante a execução dos testes foram considerados os seguintes pontos de segura
 Foram avaliados os seguintes aspectos:
 
 - Navegação por teclado  
-- Contraste de cores  
+- Contraste de cores e legibilidade  
 - Estrutura semântica da página  
-- Compatibilidade com leitores de tela  
+- Compatibilidade com leitores de tela (NVDA / VoiceOver)  
 - Pontuação Lighthouse  
 
-As páginas avaliadas apresentaram **pontuação de acessibilidade superior a 90 no Lighthouse**.
+As páginas avaliadas apresentaram pontuação de acessibilidade superior a 90 no Lighthouse.
 
 ---
 
@@ -172,8 +173,11 @@ As páginas avaliadas apresentaram **pontuação de acessibilidade superior a 90
 Foi realizada análise de desempenho utilizando Lighthouse para avaliar:
 
 - Tempo de carregamento da aplicação  
-- Tempo de resposta das operações críticas  
-- Estabilidade da aplicação em diferentes resoluções  
+- Tempo de resposta das operações críticas (cadastro e busca de profissionais)
+
+Também foi realizada simulação de múltiplos acessos simultâneos à funcionalidade de busca de profissionais, com execução de **30 requisições simultâneas via console do navegador**, para avaliar a estabilidade da aplicação sob carga.
+
+Durante o teste a aplicação respondeu corretamente às requisições sem apresentar falhas de carregamento ou erros de servidor.
 
 ---
 
@@ -181,10 +185,10 @@ Foi realizada análise de desempenho utilizando Lighthouse para avaliar:
 
 Foram avaliados dois contextos principais:
 
-- **Mobile (até 600px)**  
-- **Desktop (acima de 1024px)**  
+- Mobile (até 600px)  
+- Desktop (acima de 1024px)  
 
-Foram verificadas possíveis quebras de layout, problemas de usabilidade e inconsistências visuais.
+Foram verificadas possíveis quebras de layout, problemas de usabilidade e inconsistências visuais nas principais telas da aplicação.
 
 ---
 
@@ -194,7 +198,7 @@ Caso um teste automatizado apresente falha ou instabilidade, o rollback pode ser
 
 O histórico de commits no GitHub permite restaurar versões anteriores estáveis dos testes automatizados.
 
---- 
+---
 
 ## Documentação Completa
 
