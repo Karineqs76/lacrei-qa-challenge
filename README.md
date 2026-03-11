@@ -40,10 +40,11 @@ Google Chrome
 
 # Como configurar o ambiente de testes
 
+
 1. Clonar o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/Karineqs76/lacrei-qa-challenge.git
 ```
 
 2. Abrir o projeto em um editor de código (ex: VS Code)
