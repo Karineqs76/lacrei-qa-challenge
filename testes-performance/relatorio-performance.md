@@ -80,6 +80,7 @@ As 30 requisições foram executadas com sucesso e a aplicação respondeu norma
 
 Observação 
 Durante a simulação de acessos simultâneos, a aplicação manteve comportamento estável, indicando capacidade de lidar com múltiplas requisições para a funcionalidade de busca de profissionais.
+
 ---
 
 ## Conclusão
