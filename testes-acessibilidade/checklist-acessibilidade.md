@@ -4,10 +4,11 @@ Os testes de acessibilidade foram realizados utilizando Chrome DevTools e Lighth
 
 ## Itens avaliados
 
-Navegação por teclado  
-Contraste de cores  
-Estrutura semântica da página  
-Pontuação Lighthouse
+- Navegação por teclado
+- Contraste de cores
+- Estrutura semântica da página
+- Uso com leitores de tela
+- Pontuação Lighthouse
 
 ---
 
@@ -53,6 +54,22 @@ Uso adequado de elementos estruturais e semânticos.
 
 Resultado obtido  
 Pontuação de acessibilidade acima de 90.
+
+Status  
+Passou
+
+---
+
+## Uso com leitores de tela
+
+Ação  
+Avaliar compatibilidade da interface com tecnologias assistivas por meio da análise da estrutura semântica da página e dos elementos identificados pelo Lighthouse.
+
+Resultado esperado  
+Leitores de tela devem conseguir interpretar corretamente títulos, campos de formulário, botões e links da interface.
+
+Resultado obtido  
+A análise da estrutura da página indicou presença de marcação semântica adequada para interpretação por leitores de tela.
 
 Status  
 Passou
