@@ -11,21 +11,21 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: automacao
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          cd automacao
-          npm install
+        run: npm install
 
       - name: Run Cypress tests
-        run: |
-          cd automacao
-          npx cypress run
+        run: npx cypress run
