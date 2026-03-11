@@ -78,8 +78,8 @@ Execução de script no console do navegador para disparar múltiplas requisiç�
 Resultado observado  
 As 30 requisições foram executadas com sucesso e a aplicação respondeu normalmente, sem apresentar falhas de carregamento ou erros de servidor.
 
-Observação 
-Durante a simulação de acessos simultâneos, a aplicação manteve comportamento estável, indicando capacidade de lidar com múltiplas requisições para a funcionalidade de busca de profissionais.
+Observação  
+Durante a simulação de múltiplos acessos simultâneos, a aplicação manteve comportamento estável, sem erros de resposta ou falhas de carregamento. No entanto, considerando as métricas coletadas no Lighthouse, especialmente o indicador de Largest Contentful Paint em dispositivos móveis, existem oportunidades de otimização para melhorar o tempo de carregamento da interface.
 
 ---
 
