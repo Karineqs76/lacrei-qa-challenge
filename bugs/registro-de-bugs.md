@@ -74,7 +74,7 @@ Baixa
 
 ---
 
-### 8. Problemas de responsividade em dispositivos móveis
+### 8/9. Problemas de responsividade em dispositivos móveis
 
 Descrição  
 Foram identificadas quebras de layout nas telas de perfil de profissional e perfil de usuário quando visualizadas em resolução mobile.
@@ -84,7 +84,7 @@ Média
 
 ---
 
-### 9. Texto "string" exibido na localização do profissional
+### 10. Texto "string" exibido na localização do profissional
 
 Descrição  
 Na tela de visualização do perfil de profissional, o campo de localização apresenta o texto "string" antes da cidade e estado, exibindo "string, São Paulo, SP".
@@ -94,7 +94,7 @@ Baixa
 
 ---
 
-### 10. Ação "Reenviar código de segurança" não apresenta confirmação visual
+### 11. Ação "Reenviar código de segurança" não apresenta confirmação visual
 
 Descrição  
 Na tela de confirmação de código SMS durante o fluxo de agendamento de consulta, ao clicar em "Reenviar código de segurança" o sistema envia corretamente um novo código por SMS, porém não apresenta nenhuma confirmação visual na interface.
