@@ -4,24 +4,20 @@ Os testes de performance foram realizados utilizando a ferramenta Lighthouse do 
 
 ---
 
-# Cenário de Teste de Performance
+## Cenário de Teste de Performance
 
-Cenário: Avaliar tempo de resposta das operações críticas da aplicação
+Cenário  
+Avaliar o tempo de resposta das operações críticas da plataforma Lacrei Saúde.
 
-Operações avaliadas:
+Operações avaliadas  
+Cadastro de usuário  
+Busca de profissionais de saúde
 
-- Cadastro de usuário
-- Busca de profissionais de saúde
+Ação  
+Acessar as páginas de cadastro e busca de profissionais e executar análise de performance utilizando Lighthouse no Chrome DevTools.
 
-Objetivo do teste:
-
-Validar o tempo de resposta da aplicação e identificar possíveis gargalos de desempenho nas principais funcionalidades da plataforma.
-
-Ferramenta utilizada:
-
-- Lighthouse (Chrome DevTools)
-
----
+Resultado esperado  
+As páginas devem responder dentro de tempos aceitáveis de carregamento, garantindo boa experiência para a usuária da plataforma.
 
 # Ambiente de Teste
 
@@ -38,70 +34,58 @@ Página de busca de profissionais
 
 ---
 
-# Resultados
+## Métricas de Tempo de Resposta
 
-## 1. Página de busca de profissionais
+As métricas abaixo foram coletadas utilizando Lighthouse no Chrome DevTools em modo mobile.
 
-URL  
+### Busca de profissionais
+
+First Contentful Paint: 0,9 s  
+Largest Contentful Paint: 8,0 s  
+Speed Index: 4,2 s  
+Total Blocking Time: 390 ms  
+Cumulative Layout Shift: 0.002
+
+Observação  
+O tempo de First Contentful Paint apresentou valor adequado, indicando que o primeiro conteúdo visível é carregado rapidamente.  
+Entretanto, o Largest Contentful Paint apresentou valor elevado, indicando que o carregamento do elemento principal da página pode levar mais tempo para ser exibido.
+
+---
+
+### Página de cadastro
+
+First Contentful Paint: 2,7 s  
+Largest Contentful Paint: 7,1 s  
+Speed Index: 4,4 s  
+Total Blocking Time: 380 ms  
+Cumulative Layout Shift: 0.002
+
+Observação  
+O tempo de carregamento inicial apresentou valor superior ao observado na página de busca, indicando que o conteúdo inicial da página pode demorar mais para aparecer para o usuário em dispositivos móveis.
+
+---
+
+## Teste de Estabilidade sob Carga
+
+Para avaliar o comportamento da aplicação sob múltiplos acessos simultâneos, foi realizada uma simulação de 30 requisições simultâneas para a página de busca de profissionais utilizando o console do navegador.
+
+URL testada  
 https://paciente-staging.lacreisaude.com.br/saude/paciente/profissional/busca/
 
-### Desktop
+Método utilizado  
+Execução de script no console do navegador para disparar múltiplas requisições simultâneas utilizando `fetch`.
 
-Performance: 81  
-Acessibilidade: 96  
-Boas práticas: 96  
-SEO: 82  
+Resultado observado  
+As 30 requisições foram executadas com sucesso e a aplicação respondeu normalmente, sem apresentar falhas de carregamento ou erros de servidor.
 
-### Mobile
-
-Performance: 64  
-Acessibilidade: 96  
-Boas práticas: 96  
-SEO: 82  
-
-Observação  
-A pontuação de performance em mobile apresentou valor inferior ao desktop, indicando possível impacto no tempo de carregamento em dispositivos móveis.
-
+Observação 
+Durante a simulação de acessos simultâneos, a aplicação manteve comportamento estável, indicando capacidade de lidar com múltiplas requisições para a funcionalidade de busca de profissionais.
 ---
 
-## 2. Página de cadastro
+## Conclusão
 
-URL  
-https://paciente-staging.lacreisaude.com.br/saude/paciente/cadastrar/
+Os testes de desempenho indicaram que as páginas avaliadas apresentam boa estabilidade durante acessos simultâneos, respondendo corretamente às requisições realizadas.
 
-### Desktop
+Entretanto, as métricas coletadas no Lighthouse indicam que o tempo de carregamento em dispositivos móveis pode ser otimizado, especialmente no indicador de Largest Contentful Paint, que apresentou valores elevados.
 
-Performance: 78  
-Acessibilidade: 96  
-Boas práticas: 96  
-SEO: 82  
-
-### Mobile
-
-Performance: 61  
-Acessibilidade: 96  
-Boas práticas: 96  
-SEO: 82  
-
-Observação  
-A performance em dispositivos móveis apresentou pontuação inferior ao desktop, o que pode indicar necessidade de otimização de carregamento para usuários mobile.
-
----
-
-# Estabilidade sob carga
-
-Para avaliar o comportamento da aplicação sob múltiplos acessos, foi realizada simulação de acessos consecutivos às páginas críticas da aplicação (cadastro e busca de profissionais).
-
-Durante a execução dos testes, a aplicação manteve estabilidade nas requisições, sem falhas de carregamento ou indisponibilidade observada no ambiente de staging.
-
-Devido às limitações do ambiente de teste (staging), não foi possível executar ferramentas dedicadas de teste de carga para simulação real de múltiplos usuários simultâneos. No entanto, a aplicação demonstrou comportamento estável durante acessos repetidos às operações críticas.
-
----
-
-# Conclusão
-
-Os testes indicaram boa pontuação em acessibilidade e boas práticas.
-
-Entretanto, a pontuação de performance em dispositivos móveis ficou abaixo da obtida em desktop, indicando possíveis oportunidades de otimização de carregamento para usuários mobile.
-
-As operações críticas avaliadas (cadastro e busca de profissionais) responderam de forma estável durante os testes realizados no ambiente de staging.
+De forma geral, a aplicação manteve comportamento estável durante os testes, sem falhas de resposta ou indisponibilidade nas operações críticas avaliadas (cadastro e busca de profissionais).
